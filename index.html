@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="Liangbin Jiang is an undergraduate student in Computer Science and Technology at South China University of Technology, interested in video understanding and multimodal learning.">
+  <meta property="og:title" content="Liangbin Jiang | Academic Homepage">
+  <meta property="og:description" content="Undergraduate student at South China University of Technology · Video understanding, temporal grounding and multimodal learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jiangliangbin.github.io/">
+  <link rel="canonical" href="https://jiangliangbin.github.io/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzIwMzEzYSIvPgogIDx0ZXh0IHg9IjEyIiB5PSI0MyIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMzIiBmaWxsPSIjZmJmYWY3IiBmb250LXdlaWdodD0iYm9sZCI+TEo8L3RleHQ+CiAgPGNpcmNsZSBjeD0iNTEiIGN5PSI0NiIgcj0iMyIgZmlsbD0iI2JiNzY1NCIvPgo8L3N2Zz4K">
+  <style>
+:root {
+  color-scheme: light;
+  --paper: #fbfaf7;
+  --ink: #20313a;
+  --text: #3d4b50;
+  --muted: #778184;
+  --accent: #a45e40;
+  --line: #e1dfd8;
+  --soft: #f1eee8;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 35px; }
+body { margin: 0; background: var(--paper); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+::selection { background: #e8c8b7; color: var(--ink); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.skip-link { position: absolute; z-index: 99; top: -80px; left: 18px; padding: 12px 16px; background: var(--ink); color: white; }
+.skip-link:focus { top: 12px; }
+.page-shell { max-width: 1184px; margin: 0 auto; padding: 0 54px; }
+.site-header { height: 100px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 18px; text-decoration: none; color: var(--ink); }
+.brand-mark { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -2.5px; line-height: 1; }
+.brand-dot { color: var(--accent); }
+.brand-name { font-size: 10px; font-weight: 700; letter-spacing: .20em; color: #7c8281; }
+.site-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 38px; }
+.site-nav a { text-decoration: none; font-size: 12px; font-weight: 600; color: #5d696b; transition: color .2s ease; }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--accent); }
+.nav-arrow { margin-left: 2px; color: var(--accent); }
+.hero { display: grid; grid-template-columns: minmax(0,1fr) 292px; align-items: center; gap: 86px; padding: 83px 0 105px; }
+.hero-copy { min-width: 0; }
+.eyebrow { display: flex; align-items: center; flex-wrap: wrap; gap: 13px; margin: 0 0 27px; color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .20em; }
+.eyebrow-line { width: 28px; height: 1px; background: var(--accent); }
+.eyebrow-separator { color: #c4afa3; font-weight: 400; }
+h1,h2,h3,p { margin-top: 0; }
+h1 { font-family: var(--serif); font-size: clamp(58px, 6.2vw, 89px); line-height: 1.055; color: var(--ink); font-weight: 400; letter-spacing: -.063em; margin-bottom: 18px; white-space: nowrap; }
+h1 em { font-weight: 400; font-style: italic; color: var(--accent); }
+.hero-role { font-size: 13px; color: #58666b; letter-spacing: .025em; font-weight: 600; margin-bottom: 39px; }
+.hero-role span { color: var(--accent); padding: 0 9px; }
+.hero-intro { max-width: 555px; font-family: var(--serif); font-size: clamp(24px, 2.6vw, 33px); line-height: 1.36; letter-spacing: -.025em; color: #33464e; margin-bottom: 35px; }
+.hero-affiliation { display: flex; align-items: flex-start; gap: 16px; font-size: 13px; line-height: 1.85; color: #778083; }
+.hero-affiliation strong { color: #43545b; font-weight: 600; }
+.affiliation-accent { flex: none; width: 2px; height: 37px; background: #c9926f; margin-top: 3px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 43px; }
+.primary-link { display: inline-flex; align-items: center; justify-content: center; gap: 28px; padding: 15px 21px; min-height: 47px; background: var(--ink); color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: background .18s ease, transform .18s ease; }
+.primary-link:hover { background: var(--accent); transform: translateY(-2px); }
+.secondary-link { text-decoration: none; border-bottom: 1px solid #c7c8c4; padding-bottom: 5px; color: var(--ink); font-size: 12px; font-weight: 600; transition: color .18s; }
+.secondary-link:hover { color: var(--accent); }
+.secondary-link span { color: var(--accent); margin-left: 8px; }
+.portrait-area { min-width: 0; margin-top: 5px; }
+.portrait-border { position: relative; background: #edece7; padding: 9px; box-shadow: 17px 19px 0 -8px #e9e5dd; }
+.portrait { display: block; width: 100%; aspect-ratio: 300/413; height: auto; object-fit: cover; object-position: center 29%; background: #f1f0ed; }
+.portrait-caption { display: flex; justify-content: space-between; gap: 10px; padding-top: 24px; color: #8c908e; font-size: 9px; letter-spacing: .17em; font-weight: 700; }
+.content-section { border-top: 1px solid var(--line); padding: 45px 0 68px; display: grid; grid-template-columns: 260px minmax(0,1fr); gap: 44px; scroll-margin-top: 20px; }
+.section-heading { display: flex; gap: 17px; align-items: baseline; }
+.section-index { flex: none; font-family: var(--serif); color: var(--accent); font-size: 14px; }
+h2 { color: var(--ink); font: 400 28px/1.2 var(--serif); letter-spacing: -.045em; }
+.section-body { max-width: 655px; }
+.section-body p { font-size: 14px; line-height: 1.92; }
+.section-body strong { font-weight: 600; color: #3a4b52; }
+.about-body .lead { font: 400 24px/1.4 var(--serif); color: var(--ink); letter-spacing: -.025em; margin-bottom: 16px; }
+.about-body a { text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: #c3bab0; }
+.about-body a:hover { color: var(--accent); }
+.section-intro { color: #748087; margin-bottom: 16px; }
+.interest-list { border-top: 1px solid var(--line); }
+.interest-item { display: grid; grid-template-columns: 48px minmax(0,1fr) 17px; gap: 17px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.interest-number { font-family: var(--serif); color: var(--accent); font-size: 14px; padding-top: 4px; }
+.interest-item h3 { color: var(--ink); font: 400 19px/1.4 var(--serif); letter-spacing: -.025em; margin-bottom: 6px; }
+.interest-item p { color: #748087; font-size: 13px; line-height: 1.75; margin-bottom: 0; }
+.interest-symbol { color: #a5aaa8; font-size: 17px; }
+.institution-label { color: var(--accent); font-size: 10px !important; line-height: 1.5 !important; letter-spacing: .17em; font-weight: 700; margin-bottom: 17px; }
+.education-body h3 { font: 400 24px/1.35 var(--serif); letter-spacing: -.035em; color: var(--ink); margin-bottom: 8px; }
+.school-abbr { color: #798487; font-size: 17px; }
+.education-body .degree { font-weight: 600; color: #4f5d60; margin-bottom: 4px; }
+.education-body .school-detail { margin-bottom: 5px; color: #708084; }
+.education-body .school-location { color: #a0a29f; font-size: 12px; }
+.contact-section { padding-bottom: 105px; }
+.contact-intro { max-width: 540px; color: #667579; }
+.contact-mail { font: 400 clamp(22px, 3.3vw, 36px)/1.4 var(--serif); color: var(--ink); text-decoration: none; border-bottom: 1px solid #b0b8b7; display: inline-flex; gap: 19px; align-items: baseline; padding-bottom: 8px; letter-spacing: -.035em; transition: color .2s, border-color .2s; overflow-wrap: anywhere; }
+.contact-mail:hover { color: var(--accent); border-color: var(--accent); }
+.contact-mail span { color: var(--accent); font-size: 18px; }
+.contact-links { display: flex; gap: 29px; margin-top: 32px; }
+.contact-links a { text-decoration: none; color: #677578; font-size: 12px; font-weight: 600; }
+.contact-links a:hover { color: var(--accent); }
+.contact-links span { color: var(--accent); margin-left: 4px; }
+.site-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; justify-content: space-between; padding: 25px 0 32px; border-top: 1px solid var(--line); font-size: 11px; color: #9ba19d; }
+.site-footer a { text-decoration: none; color: #7b8585; font-weight: 600; }
+.site-footer a:hover { color: var(--accent); }
+@media (max-width: 1080px) {
+  .page-shell { padding-left: 35px; padding-right: 35px; }
+  .hero { grid-template-columns: minmax(0,1fr) 260px; gap: 48px; }
+  h1 { font-size: clamp(54px, 7vw, 76px); }
+  .content-section { grid-template-columns: 220px minmax(0,1fr); gap: 30px; }
+}
+@media (max-width: 760px) {
+  .page-shell { padding: 0 26px; }
+  .site-header { align-items: flex-start; justify-content: center; flex-direction: column; gap: 20px; padding: 22px 0; height: auto; }
+  .brand-mark { font-size: 28px; }
+  .site-nav { gap: 22px; }
+  .site-nav a { font-size: 11px; }
+  .hero { display: flex; flex-direction: column-reverse; gap: 40px; align-items: stretch; padding: 45px 0 65px; }
+  .portrait-area { max-width: 245px; margin: 0; }
+  .portrait-caption { padding-top: 15px; font-size: 8px; }
+  .hero-copy { width: 100%; }
+  .eyebrow { margin-bottom: 22px; }
+  h1 { font-size: clamp(55px, 12vw, 76px); }
+  .hero-intro { font-size: 25px; }
+  .hero-role { margin-bottom: 26px; }
+  .hero-actions { margin-top: 30px; }
+  .content-section { display: block; padding: 32px 0 50px; }
+  .section-heading { margin-bottom: 26px; }
+  .contact-section { padding-bottom: 78px; }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
+}
+@media (max-width: 420px) {
+  .page-shell { padding: 0 19px; }
+  .site-nav { gap: 15px; }
+  h1 { font-size: clamp(49px, 12.5vw, 61px); }
+  .hero-intro { font-size: 23px; }
+  .hero-actions { gap: 21px; }
+  .interest-item { grid-template-columns: 30px minmax(0,1fr) 12px; gap: 11px; }
+  .contact-mail { font-size: 22px; gap: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,*::before,*::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+@media print {
+  body { background: white; }
+  .page-shell { max-width: none; }
+  .site-header { height: 65px; }
+  .hero { padding: 35px 0 45px; }
+  .primary-link { color: var(--ink); background: none; border: 1px solid var(--line); }
+}
+
+</style>
+  <title>Liangbin Jiang — Academic Homepage</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Liangbin Jiang, back to top">
+        <span class="brand-mark" aria-hidden="true">LJ<span class="brand-dot">.</span></span>
+        <span class="brand-name">ACADEMIC HOMEPAGE</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact <span class="nav-arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL WEBSITE <span class="eyebrow-separator">/</span> 2026</p>
+          <h1 id="hero-title">Liangbin <em>Jiang.</em></h1>
+          <p class="hero-role">Undergraduate Student <span aria-hidden="true">·</span> Computer Science</p>
+          <p class="hero-intro">Exploring how intelligent systems perceive, understand, and reason about visual information over time.</p>
+          <div class="hero-affiliation">
+            <span class="affiliation-accent" aria-hidden="true"></span>
+            <span>School of Computer Science and Engineering<br>
+              <strong>South China University of Technology</strong>
+            </span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-link" href="mailto:wuw643999@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+            <a class="secondary-link" href="https://github.com/jiangliangbin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="portrait-area">
+          <div class="portrait-border">
+            <img class="portrait" src="data:image/jpeg;base64,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" width="300" height="413" alt="Portrait of Liangbin Jiang">
+          </div>
+          <div class="portrait-caption"><span>01 / PORTRAIT</span><span>LIANGBIN JIANG</span></div>
+        </div>
+      </section>
+
+      <section class="content-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading"><span class="section-index">01 /</span><h2 id="about-title">About me</h2></div>
+        <div class="section-body about-body">
+          <p class="lead">Hello, I'm Liangbin.</p>
+          <p>I am an undergraduate student majoring in <strong>Computer Science and Technology</strong> at the <a href="https://www2.scut.edu.cn/cs_en/" target="_blank" rel="noopener noreferrer">School of Computer Science and Engineering</a>, South China University of Technology (SCUT).</p>
+          <p>My academic interests lie at the intersection of computer vision and multimodal machine learning. I am particularly interested in video understanding, temporal grounding, and methods that enable vision-language models to process long or streaming videos efficiently.</p>
+        </div>
+      </section>
+
+      <section class="content-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading"><span class="section-index">02 /</span><h2 id="research-title">Research interests</h2></div>
+        <div class="section-body">
+          <p class="section-intro">Areas I am interested in exploring:</p>
+          <div class="interest-list">
+            <article class="interest-item">
+              <span class="interest-number">01</span>
+              <div><h3>Video Understanding</h3><p>Learning rich temporal representations to interpret events and relationships in videos.</p></div>
+              <span class="interest-symbol" aria-hidden="true">↗</span>
+            </article>
+            <article class="interest-item">
+              <span class="interest-number">02</span>
+              <div><h3>Video Temporal Grounding</h3><p>Aligning natural-language queries with relevant moments in video sequences.</p></div>
+              <span class="interest-symbol" aria-hidden="true">↗</span>
+            </article>
+            <article class="interest-item">
+              <span class="interest-number">03</span>
+              <div><h3>Streaming Video &amp; Multimodal Models</h3><p>Investigating efficient memory, online reasoning, and video question answering.</p></div>
+              <span class="interest-symbol" aria-hidden="true">↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><span class="section-index">03 /</span><h2 id="education-title">Education</h2></div>
+        <div class="section-body education-body">
+          <p class="institution-label">CURRENT EDUCATION</p>
+          <h3>South China University of Technology <span class="school-abbr">(SCUT)</span></h3>
+          <p class="degree">Undergraduate · Computer Science and Technology</p>
+          <p class="school-detail">School of Computer Science and Engineering</p>
+          <p class="school-location">Guangzhou, China</p>
+        </div>
+      </section>
+
+      <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading"><span class="section-index">04 /</span><h2 id="contact-title">Get in touch</h2></div>
+        <div class="section-body">
+          <p class="contact-intro">I'm happy to connect about research ideas, academic topics, and shared interests.</p>
+          <a class="contact-mail" href="mailto:wuw643999@gmail.com">wuw643999@gmail.com <span aria-hidden="true">↗</span></a>
+          <div class="contact-links"><a href="https://github.com/jiangliangbin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.scut.edu.cn/en/" target="_blank" rel="noopener noreferrer">SCUT <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span id="year">2026</span> Liangbin Jiang</span><span>Made for curiosity, built to keep learning.</span><a href="#top">Back to top ↑</a></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
